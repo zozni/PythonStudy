@@ -1,6 +1,6 @@
 result = 0
 def add(num):
-    global result
+    global result  #전역변수
     result += num
     return result
 
