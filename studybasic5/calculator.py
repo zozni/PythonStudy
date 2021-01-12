@@ -1,15 +1,17 @@
-class Calculator:
-    def __init__(self):
-        self.result =0
+class FourCal:   #부모 클래스
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+    def add(self):
+        result = self.first + self.second
+        return result
 
-    def add(self,num):
-        self.result += num
-        return self.result
-
-cal1 = Calculator()
-cal2 = Calculator()
-
-print(cal1.add(3))
-print(cal1.add(4))
-print(cal2.add(3))
-print(cal2.add(4))
+class MoreFourCal(FourCal): #자식 클래스
+    def pow(self):
+        result = self.first ** self.second
+        return result
+a = MoreFourCal(4, 2)
+print(a.add())
