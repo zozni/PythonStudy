@@ -6,4 +6,4 @@ def GuGu(n):
         result.append(n*i)
     return result
     
-print(GuGu(2))
+print(GuGu(8))
